@@ -43,4 +43,4 @@ For more details on the search request and the exceptions, which the API can thr
 
 ## Further Information
 
-For more information on address validations with GLASP, you can check out our overview for the E2E example at [to be added] and our website at https://www.glasp.eu.
+For more information on address validations with GLASP, you can check out our overview for the E2E example at https://github.com/glasp-api/address-validation-example and our website at https://www.glasp.eu.
