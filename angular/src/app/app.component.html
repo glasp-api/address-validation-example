@@ -1,0 +1,86 @@
+<div class="container" [formGroup]="form">
+  <form>
+    <mat-label class="title">Ship-To-Address:</mat-label>
+
+    <mat-form-field class="first-name" appearance="fill" [ngClass]="{'valid': form.controls['firstNameInput'].valid}">
+      <mat-label>First Name</mat-label>
+      <input type="text"
+             id="firstName"
+             matInput
+             formControlName="firstNameInput">
+    </mat-form-field>
+    <mat-form-field class="surname" appearance="fill" [ngClass]="{'valid': form.controls['surnameInput'].valid}">
+      <mat-label>Surname</mat-label>
+      <input type="text"
+             matInput
+             formControlName="surnameInput">
+    </mat-form-field>
+
+    <div class="streetBlock">
+      <mat-form-field class="street" appearance="fill" [ngClass]="{'valid': hasValidAddress, 'error': hasSubmittedAddress}">
+        <mat-label>Street</mat-label>
+        <input type="text"
+               matInput
+               aria-label="street"
+               formControlName="streetInput"
+               [search]="street">
+        <search #street="search">
+          <ng-template let-address>{{address.street}}</ng-template>
+        </search>
+      </mat-form-field>
+      <div class="formPadding"></div>
+      <mat-form-field class="number" appearance="fill" [ngClass]="{'valid': form.controls['numberInput'].valid}">
+        <mat-label>Nr.</mat-label>
+        <input type="text"
+               matInput
+               formControlName="numberInput">
+      </mat-form-field>
+    </div>
+
+    <div class="cityBlock">
+      <mat-form-field class="zip" appearance="fill" [ngClass]="{'valid': hasValidAddress, 'error': hasSubmittedAddress}">
+        <mat-label>Zip Code</mat-label>
+        <input type="text"
+               matInput
+               aria-label="zip"
+               formControlName="zipInput"
+               [search]="zip">
+        <search #zip="search">
+          <ng-template let-address>{{address.zip}}</ng-template>
+        </search>
+      </mat-form-field>
+      <div class="formPadding"></div>
+      <mat-form-field class="city" appearance="fill" [ngClass]="{'valid': hasValidAddress, 'error': hasSubmittedAddress}">
+        <mat-label>City</mat-label>
+        <input type="text"
+               matInput
+               aria-label="city"
+               formControlName="cityInput"
+               [search]="city">
+        <search #city="search">
+          <ng-template let-address>{{address.city}}</ng-template>
+        </search>
+      </mat-form-field>
+    </div>
+
+    <div class="countryBlock">
+      <mat-form-field class="country" appearance="fill">
+        <mat-label>Country</mat-label>
+        <mat-select formControlName="countrySelect" [disableOptionCentering]="true" panelClass="countrySelect">
+          <mat-option *ngFor="let country of countries | keyvalue" [value]="country.key">{{country.key}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="rightPadding"></div>
+    </div>
+
+    <div class="controls">
+      <label class="info">{{warning}}</label>
+      <div>
+        <button color="primary" mat-raised-button type="button" class="submit" (click)="submit()">Submit</button>
+        <button mat-raised-button type="button" (click)="reset()">Reset</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+

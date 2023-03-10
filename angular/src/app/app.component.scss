@@ -1,0 +1,129 @@
+.container {
+  min-width: 150px;
+  max-width: 500px;
+  padding: 20px;
+  width: 100%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid grey;
+}
+
+.first-name {
+  width: 100%;
+  padding-top: 35px;
+  padding-bottom: 17px;
+}
+
+.surname {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.streetBlock {
+  display: block;
+  padding-bottom: 17px;
+}
+
+.street {
+  width: 75%;
+}
+
+.formPadding {
+  display: inline-block;
+  width: 5%;
+}
+
+.number {
+  width: 20%;
+}
+
+.zip {
+  width: 40%;
+}
+
+.cityBlock {
+  display: block;
+  padding-bottom: 17px;
+}
+
+.city {
+  width: 55%;
+}
+
+.countryBlock {
+  padding-bottom: 20px;
+}
+
+.country {
+  width: 55%;
+}
+
+.rightPadding {
+  width: 45%;
+}
+
+.info {
+  margin-top: 10px;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+  color: #f44336;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit {
+  margin-right: 20px;
+}
+
+::ng-deep .valid {
+  .mat-form-field-label {
+    /*change color of label*/
+    color: limegreen !important;
+  }
+
+  .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: limegreen !important;
+  }
+
+  .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: limegreen !important;;
+  }
+
+  .mat-form-field-underline::before {
+    background-color: limegreen !important;
+    height: 2px !important;
+  }
+}
+
+::ng-deep .error {
+  .mat-form-field-label {
+    /*change color of label*/
+    color: #f44336 !important;
+  }
+
+  .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #f44336 !important;
+  }
+
+  .mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #f44336 !important;;
+  }
+
+  .mat-form-field-underline::before {
+    background-color: #f44336 !important;
+    height: 2px !important;
+  }
+}

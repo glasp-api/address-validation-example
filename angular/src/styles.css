@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+.countrySelect {
+  margin-top: 25px;
+  margin-left: 4px;
+  min-width: calc(100% + 24px) !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
