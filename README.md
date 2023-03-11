@@ -1,5 +1,6 @@
 # Address Validation Example
 
+![address-validation](https://user-images.githubusercontent.com/118767215/224489104-b31e6724-4d89-46df-9aae-a8038baaece5.gif)
 
 With this example, we would like to show how it is possible to use the GLASP API in a shop frontend to improve the data quality for E2E supply chain processes. In today's supply chains most of the parcel carriers in Europe need to map the customer address to a regional hub and from this hub we then have the final mile to the customer. This means you would like to avoid disruptions in the supply chain because the address cannot be mapped or the address is wrongly mapped, avoiding additional effort for your supply chain partners and customer dissatisfaction due to delivery delays. 
 
